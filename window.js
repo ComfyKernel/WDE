@@ -63,6 +63,7 @@ class webWindow {
 
 	this.element.querySelector(".window-border-top").innerHTML = t;
 	this.element.querySelector(".window-frame").src = u;
+	this.element.style.backgroundColor = "#FFFFFF";
 	
 	document.getElementById("environment").appendChild(this.element);
     }

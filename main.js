@@ -3,6 +3,12 @@ var windows = [];
 windows.push(new webWindow(40, 40, 400, 400, "Little Tundra", "https://littletundra.ddns.net"));
 windows.push(new webWindow(680, 80, 400, 200, "JS Craft", "https://littletundra.ddns.net/jscraft"));
 
+function newWindow() {
+    windows.push(new webWindow(40, 40, 400, 400,
+			       document.getElementById("w-name").value,
+			       document.getElementById("w-name").value));
+}
+
 var win_active = null;
 
 var win_state  = "none";
