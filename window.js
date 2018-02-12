@@ -74,12 +74,41 @@ class webWindow {
 		y < this.y);
     }
 
+    gibRight(x, y) {
+	return (x > this.x + this.width &&
+		y > this.y &&
+		x < this.x + this.width + 15 &&
+		y < this.height);
+    }
+
+    gibLeft(x, y) {
+	return (x > this.x - 15 &&
+		y > this.y &&
+		x < this.x &&
+		y < this.height);
+    }
+
+    gibDown(x, y) {
+	return (x > this.x &&
+	        x < this.x + this.width &&
+	        y > this.y + this.height &&
+	        y < this.y + this.height + 15);
+    }
+
     setPos(x, y) {
 	this.x = x;
 	this.y = y;
 
 	this.element.style.left = (x + "px");
 	this.element.style.top  = (y + "px");
+    }
+
+    setSize(w, h) {
+	this.width  = w;
+	this.height = h;
+
+	this.element.style.width  = (w + "px");
+	this.element.style.height = (h + "px");
     }
 
     setFrozen(f) {
